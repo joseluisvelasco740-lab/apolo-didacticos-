@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apolo Didácticos</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+        body { line-height: 1.6; color: #333; }
+        
+        /* Imagen de fondo principal */
+        .fondo-principal {
+            background: url('fondo.jpg') no-repeat center center/cover;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        
+        /* Capa semitransparente para que se lea bien el texto */
+        .capa-semitransparente {
+            background: rgba(255, 255, 255, 0.85);
+            flex: 1;
+        }
+        
+        header { 
+            background: rgba(44, 95, 139, 0.9); 
+            color: white; 
+            padding: 1.5rem; 
+            text-align: center;
+        }
+        header h1 { font-size: 2.2rem; margin-bottom: 0.5rem; }
+        header p { font-style: italic; color: #f9c74f; font-size: 1.1rem; }
+        
+        nav { background: rgba(30, 70, 110, 0.95); padding: 0.9rem; text-align: center; }
+        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: 500; font-size: 17px; }
+        nav a:hover { color: #f9c74f; }
+        
+        section { padding: 2rem; max-width: 1200px; margin: 0 auto; }
+        .hero { text-align: center; padding: 3rem 2rem; margin-top: 1rem; }
+        .hero h1 { font-size: 2rem; margin-bottom: 1rem; color: #2c5f8b; }
+        .hero p { font-size: 1.1rem; max-width: 800px; margin: 0 auto; color: #444; }
+        
+        .btn-whatsapp { 
+            display: inline-block; background: #25D366; color: white; padding: 14px 35px; 
+            border-radius: 50px; text-decoration: none; font-weight: bold; margin-top: 25px;
+            font-size: 18px; transition: background 0.3s;
+        }
+        .btn-whatsapp:hover { background: #128C7E; }
+        
+        .bienvenidos { text-align: center; margin: 3rem 0; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .bienvenidos h2 { color: #2c5f8b; font-size: 1.8rem; margin-bottom: 1rem; }
+        
+        .pdf-seccion { 
+            background: white; padding: 2.5rem; border-radius: 12px; text-align: center; margin: 2rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .pdf-seccion h2 { color: #2c5f8b; margin-bottom: 1.5rem; }
+        .pdf-link { 
+            display: inline-block; background: #3498db; color: white; padding: 12px 25px; 
+            margin: 10px; border-radius: 8px; text-decoration: none; font-size: 16px; transition: background 0.3s;
+        }
+        .pdf-link:hover { background: #2980b9; }
+        
+        .contacto { text-align: center; background: white; padding: 2.5rem; border-radius: 12px; margin: 2rem; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .contacto h2 { color: #2c5f8b; margin-bottom: 1.5rem; }
+        .contacto p { font-size: 18px; margin: 10px 0; }
+        
+        footer { background: rgba(44, 95, 139, 0.95); color: white; text-align: center; padding: 1.5rem; margin-top: 2rem; }
+        
+        .whatsapp-fijo { position: fixed; bottom: 25px; right: 25px; z-index: 1000; }
+        .whatsapp-fijo a { 
+            background: #25D366; color: white; padding: 15px 22px; border-radius: 50px; 
+            font-size: 18px; text-decoration: none; box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+            font-weight: bold; transition: transform 0.2s;
+        }
+        .whatsapp-fijo a:hover { background: #128C7E; transform: scale(1.05); }
+        
+        .eslogan-principal {
+            font-size: 1.3rem;
+            color: #e76f51;
+            font-weight: 600;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="fondo-principal">
+        <div class="capa-semitransparente">
+
+            <!-- Botón de WhatsApp fijo abajo a la derecha -->
+            <div class="whatsapp-fijo">
+                <a href="https://wa.me/525566211459" target="_blank">💬 WhatsApp</a>
+            </div>
+
+            <!-- Cabecera -->
+            <header>
+                <h1>🚀 Apolo Didácticos</h1>
+                <p>Un vuelo al universo del conocimiento ✨</p>
+            </header>
+
+            <!-- Menú de navegación -->
+            <nav>
+                <a href="#inicio">Inicio</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#catalogos">Catálogos</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+
+            <!-- Sección principal -->
+            <section class="hero" id="inicio">
+                <h1>📚 Bienvenidos a Apolo Didácticos</h1>
+                <p class="eslogan-principal">Libros de calidad que inspiran y enseñan</p>
+                <p style="margin-top: 1.5rem;">Fomentando el amor por la lectura, un libro a la vez. 📖✨</p>
+                <a href="https://wa.me/525566211459" class="btn-whatsapp" target="_blank">💬 ¡Escríbenos ahora!</a>
+            </section>
+
+            <!-- Nosotros -->
+            <section class="bienvenidos" id="nosotros">
+                <h2>¿Quiénes somos?</h2>
+                <p style="max-width: 700px; margin: 0 auto; font-size: 17px; color: #555;">
+                    En <strong>Apolo Didácticos</strong> creemos que cada libro es una puerta a nuevos mundos. Nuestra misión es fomentar el amor por la lectura, ofreciendo libros de calidad que no solo enseñan, sino que también inspiran, llevando el conocimiento a cada hogar. 🚀📖✨
+                </p>
+            </section>
+
+            <!-- Catálogos en PDF -->
+            <section class="pdf-seccion" id="catalogos">
+                <h2>📄 Nuestros Catálogos</h2>
+                <p style="margin-bottom: 1rem; color: #666;">Descarga o consulta nuestros catálogos aquí:</p>
+                <a href="catalogo-preescolar_compressed.pdf" class="pdf-link" target="_blank">📕 Catálogo Preescolar</a>
+                <a href="catalogo-primaria_compressed.pdf" class="pdf-link" target="_blank">📗 Catálogo Primaria</a>
+            </section>
+
+            <!-- Contacto -->
+            <section class="contacto" id="contacto">
+                <h2>📞 Contáctanos</h2>
+                <p><strong>📱 WhatsApp:</strong> <a href="https://wa.me/525566211459" target="_blank" style="color: #25D366; text-decoration: none; font-size: 20px;">5566211459</a></p>
+                <p><strong>🚀 Apolo Didácticos</strong></p>
+                <p>Un vuelo al universo del conocimiento ✨</p>
+                <a href="https://wa.me/525566211459" class="btn-whatsapp" target="_blank">💬 Enviar mensaje</a>
+            </section>
+
+            <!-- Pie de página -->
+            <footer>
+                <p>&copy; 2026 Apolo Didácticos 🚀 | Un vuelo al universo del conocimiento | Todos los derechos reservados</p>
+            </footer>
+
+        </div>
+    </div>
+
+</body>
+</html>
